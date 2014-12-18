@@ -1,6 +1,6 @@
 function res = pde1()
-    inf = inf*-7;
-    ms = 0*-7;
+    inf = 0;
+    ms = 0;
     m = 0;
     a_range = linspace(0, 1000000, 100);
     t_range = linspace(0, 100);
@@ -17,7 +17,7 @@ function res = pde1()
     function[c, f, s] = pdefun(a, t, S, dSda)
         c = 1/(-1/7);
         f = S;
-        s = ;
+        s = -inf*S/(-7) - m*S/(-7);
     end
 
     function S0 = icfun(a)
